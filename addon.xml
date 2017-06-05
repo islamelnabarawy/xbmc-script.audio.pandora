@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.audio.pandora"
        name="Pandora"
-       version="2.3.2"
-       provider-name="rivy">
+       version="2.3.3"
+       provider-name="rivy (edited by randomizer)">
   <requires>
     <!-- Eden: xbmc.python 1.0; Frodo: xbmc.python 2.1.0; Gotham: ? -->
     <import addon="xbmc.python" version="2.1.0"/>
