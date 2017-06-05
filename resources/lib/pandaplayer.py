@@ -28,15 +28,6 @@ class PandaPlayer( xbmc.Player ):
 		log( "playSong: item[item] %s" % item[1], xbmc.LOGDEBUG )
 		self.play( item[0], item[1] )
 
-	def play( self, url, item ):
-		# override play() to force use of PLAYER_CORE_MPLAYER
-		xbmc.Player( xbmc.PLAYER_CORE_MPLAYER ).play( url, item )
-
-		# NOTE: using PLAYER_CORE_MPLAYER is necessary to play .mp4 streams (low & medium quality from Pandora)
-		#   ... unfortunately, using "xbmc.Player([core]) is deprecated [ see URLref: http://forum.xbmc.org/showthread.php?tid=173887&pid=1516662#pid1516662 ]
-		#   ... and it may be removed from Gotham [ see URLref: https://github.com/xbmc/xbmc/pull/1427 ]
-		# ToDO: discuss with the XBMC Team what the solution to this problem would be
-
 	def onPlayBackStarted( self ):
 		log( "onPlayBackStarted: %s" %self.getPlayingFile(), xbmc.LOGDEBUG )
 		if self.panda.playing:
